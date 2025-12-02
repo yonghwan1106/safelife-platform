@@ -305,24 +305,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Floating cards */}
-              <div className="absolute -top-4 -right-4 glass-card rounded-xl p-3 shadow-lg animate-float">
-                <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-gradient-to-br from-rose-400 to-pink-500 rounded-lg flex items-center justify-center">
-                    <Shield className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-sm font-bold text-gray-900">보이스피싱 차단</span>
-                </div>
-              </div>
-
-              <div className="absolute -bottom-4 -left-4 glass-card rounded-xl p-3 shadow-lg animate-float" style={{ animationDelay: '1s' }}>
-                <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 bg-gradient-to-br from-blue-400 to-indigo-500 rounded-lg flex items-center justify-center">
-                    <Smartphone className="w-4 h-4 text-white" />
-                  </div>
-                  <span className="text-sm font-bold text-gray-900">키오스크 도우미</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>
