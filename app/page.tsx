@@ -242,7 +242,7 @@ export default function Home() {
 
             {/* Main Heading */}
             <div className="animate-slide-up" style={{ animationDelay: '100ms' }}>
-              <h2 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
+              <h2 className="text-4xl md:text-6xl font-black mb-6 leading-tight">
                 <span className="text-gradient-aurora">누구나 안전하고</span>
                 <br />
                 <span className="text-gradient">편리한 디지털 생활</span>
