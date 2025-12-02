@@ -1,0 +1,137 @@
+[
+  {
+    "id": "1uzmmlcwe85yyuv",
+    "name": "voice_phishing_logs",
+    "type": "base",
+    "system": false,
+    "schema": [
+      {
+        "system": false,
+        "id": "llc41sho",
+        "name": "user",
+        "type": "relation",
+        "required": true,
+        "unique": false,
+        "options": {
+          "collectionId": "fzlbrvvnlvgtcor",
+          "cascadeDelete": false,
+          "minSelect": null,
+          "maxSelect": 1,
+          "displayFields": [
+            "name"
+          ]
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "wigwfhj9",
+        "name": "transcript",
+        "type": "editor",
+        "required": true,
+        "unique": false,
+        "options": {
+          "convertUrls": false
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "orxmgech",
+        "name": "risk_level",
+        "type": "select",
+        "required": true,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "values": [
+            "low",
+            "medium",
+            "high"
+          ]
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "2tzptnec",
+        "name": "detected_patterns",
+        "type": "json",
+        "required": false,
+        "unique": false,
+        "options": {
+          "maxSize": 2000000
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "y3uwlu25",
+        "name": "caller_info",
+        "type": "json",
+        "required": false,
+        "unique": false,
+        "options": {
+          "maxSize": 2000000
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "ugiscmtd",
+        "name": "duration",
+        "type": "number",
+        "required": false,
+        "unique": false,
+        "options": {
+          "min": 0,
+          "max": null,
+          "noDecimal": false
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "k940rij1",
+        "name": "guardian_notified",
+        "type": "bool",
+        "required": false,
+        "unique": false,
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "f9apncfn",
+        "name": "is_blocked",
+        "type": "bool",
+        "required": false,
+        "unique": false,
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "59hf8wi6",
+        "name": "user_action",
+        "type": "select",
+        "required": false,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "values": [
+            "none",
+            "reported",
+            "blocked",
+            "ignored"
+          ]
+        },
+        "presentable": false
+      }
+    ],
+    "indexes": [],
+    "listRule": "@request.auth.id = user.id",
+    "viewRule": "@request.auth.id = user.id",
+    "createRule": "@request.auth.id != \"\"",
+    "updateRule": "@request.auth.id = user.id",
+    "deleteRule": "@request.auth.id = user.id"
+  }
+]

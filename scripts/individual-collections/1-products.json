@@ -1,0 +1,160 @@
+[
+  {
+    "id": "j7yqlsbo5u7bsk1",
+    "name": "products",
+    "type": "base",
+    "system": false,
+    "schema": [
+      {
+        "system": false,
+        "id": "q7mo9gqi",
+        "name": "barcode",
+        "type": "text",
+        "required": true,
+        "unique": false,
+        "options": {
+          "min": 8,
+          "max": 20,
+          "pattern": ""
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "uc72ust4",
+        "name": "name",
+        "type": "text",
+        "required": true,
+        "unique": false,
+        "options": {
+          "min": null,
+          "max": 200,
+          "pattern": ""
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "7j6fdfl8",
+        "name": "brand",
+        "type": "text",
+        "required": false,
+        "unique": false,
+        "options": {
+          "min": null,
+          "max": 100,
+          "pattern": ""
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "w4j0hbjs",
+        "name": "category",
+        "type": "select",
+        "required": false,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "values": [
+            "food",
+            "medicine",
+            "cosmetic",
+            "other"
+          ]
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "whgvba9t",
+        "name": "description",
+        "type": "editor",
+        "required": false,
+        "unique": false,
+        "options": {
+          "convertUrls": false
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "mrqkfofy",
+        "name": "ingredients",
+        "type": "json",
+        "required": false,
+        "unique": false,
+        "options": {
+          "maxSize": 2000000
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "ki7v2xfq",
+        "name": "allergens",
+        "type": "json",
+        "required": false,
+        "unique": false,
+        "options": {
+          "maxSize": 2000000
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "s90qvnmb",
+        "name": "expiry_date",
+        "type": "date",
+        "required": false,
+        "unique": false,
+        "options": {
+          "min": "",
+          "max": ""
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "usdxibxe",
+        "name": "warnings",
+        "type": "editor",
+        "required": false,
+        "unique": false,
+        "options": {
+          "convertUrls": false
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "2iofm977",
+        "name": "image",
+        "type": "file",
+        "required": false,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "maxSize": 5242880,
+          "mimeTypes": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "thumbs": [
+            "100x100"
+          ]
+        },
+        "presentable": false
+      }
+    ],
+    "indexes": [
+      "CREATE UNIQUE INDEX idx_barcode ON products (barcode)"
+    ],
+    "listRule": "",
+    "viewRule": "",
+    "createRule": null,
+    "updateRule": null,
+    "deleteRule": null
+  }
+]

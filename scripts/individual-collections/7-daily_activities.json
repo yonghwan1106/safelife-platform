@@ -1,0 +1,129 @@
+[
+  {
+    "id": "u62z139pn4ib8ma",
+    "name": "daily_activities",
+    "type": "base",
+    "system": false,
+    "schema": [
+      {
+        "system": false,
+        "id": "sx723196",
+        "name": "user",
+        "type": "relation",
+        "required": true,
+        "unique": false,
+        "options": {
+          "collectionId": "fzlbrvvnlvgtcor",
+          "cascadeDelete": false,
+          "minSelect": null,
+          "maxSelect": 1,
+          "displayFields": [
+            "name"
+          ]
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "xndoz70o",
+        "name": "date",
+        "type": "date",
+        "required": true,
+        "unique": false,
+        "options": {
+          "min": "",
+          "max": ""
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "m9gttiu1",
+        "name": "barcode_scans",
+        "type": "number",
+        "required": false,
+        "unique": false,
+        "options": {
+          "min": 0,
+          "max": null,
+          "noDecimal": true
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "pzrplmc2",
+        "name": "kiosk_uses",
+        "type": "number",
+        "required": false,
+        "unique": false,
+        "options": {
+          "min": 0,
+          "max": null,
+          "noDecimal": true
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "v1zwiycr",
+        "name": "voice_phishing_detections",
+        "type": "number",
+        "required": false,
+        "unique": false,
+        "options": {
+          "min": 0,
+          "max": null,
+          "noDecimal": true
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "acx1jk1h",
+        "name": "active_time",
+        "type": "number",
+        "required": false,
+        "unique": false,
+        "options": {
+          "min": 0,
+          "max": null,
+          "noDecimal": true
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "0gvdi41d",
+        "name": "health_score",
+        "type": "number",
+        "required": false,
+        "unique": false,
+        "options": {
+          "min": 0,
+          "max": 100,
+          "noDecimal": true
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "nmwe0nse",
+        "name": "summary",
+        "type": "editor",
+        "required": false,
+        "unique": false,
+        "options": {
+          "convertUrls": false
+        },
+        "presentable": false
+      }
+    ],
+    "indexes": [],
+    "listRule": "@request.auth.id = user.id",
+    "viewRule": "@request.auth.id = user.id",
+    "createRule": "@request.auth.id != \"\"",
+    "updateRule": "@request.auth.id != \"\"",
+    "deleteRule": "@request.auth.id = user.id"
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "id": "yakd1gi1bmznz5f",
+    "name": "kiosk_sessions",
+    "type": "base",
+    "system": false,
+    "schema": [
+      {
+        "system": false,
+        "id": "biq7v1xn",
+        "name": "user",
+        "type": "relation",
+        "required": true,
+        "unique": false,
+        "options": {
+          "collectionId": "fzlbrvvnlvgtcor",
+          "cascadeDelete": false,
+          "minSelect": null,
+          "maxSelect": 1,
+          "displayFields": [
+            "name"
+          ]
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "jec430hv",
+        "name": "kiosk_type",
+        "type": "select",
+        "required": true,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "values": [
+            "fastfood",
+            "cafe",
+            "ticket",
+            "payment",
+            "other"
+          ]
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "8e2vhqds",
+        "name": "location",
+        "type": "text",
+        "required": false,
+        "unique": false,
+        "options": {
+          "min": null,
+          "max": null,
+          "pattern": ""
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "ibzxnyjw",
+        "name": "screenshot",
+        "type": "file",
+        "required": false,
+        "unique": false,
+        "options": {
+          "maxSelect": 99,
+          "maxSize": 5242880,
+          "mimeTypes": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "thumbs": [
+            "100x100"
+          ]
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "x0gp8we2",
+        "name": "steps_completed",
+        "type": "json",
+        "required": false,
+        "unique": false,
+        "options": {
+          "maxSize": 2000000
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "w35hx6qz",
+        "name": "duration",
+        "type": "number",
+        "required": false,
+        "unique": false,
+        "options": {
+          "min": 0,
+          "max": null,
+          "noDecimal": false
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "jempd5l6",
+        "name": "success",
+        "type": "bool",
+        "required": false,
+        "unique": false,
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "n3gjr2qy",
+        "name": "help_requested",
+        "type": "bool",
+        "required": false,
+        "unique": false,
+        "presentable": false
+      }
+    ],
+    "indexes": [],
+    "listRule": "@request.auth.id = user.id",
+    "viewRule": "@request.auth.id = user.id",
+    "createRule": "@request.auth.id != \"\"",
+    "updateRule": "@request.auth.id = user.id",
+    "deleteRule": "@request.auth.id = user.id"
+  }
+]

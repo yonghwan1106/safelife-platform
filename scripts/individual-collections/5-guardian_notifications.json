@@ -1,0 +1,152 @@
+[
+  {
+    "id": "dth23idkeac70gu",
+    "name": "guardian_notifications",
+    "type": "base",
+    "system": false,
+    "schema": [
+      {
+        "system": false,
+        "id": "so4d13kb",
+        "name": "guardian",
+        "type": "relation",
+        "required": true,
+        "unique": false,
+        "options": {
+          "collectionId": "fzlbrvvnlvgtcor",
+          "cascadeDelete": false,
+          "minSelect": null,
+          "maxSelect": 1,
+          "displayFields": [
+            "name"
+          ]
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "u0yk174m",
+        "name": "elderly_user",
+        "type": "relation",
+        "required": true,
+        "unique": false,
+        "options": {
+          "collectionId": "fzlbrvvnlvgtcor",
+          "cascadeDelete": false,
+          "minSelect": null,
+          "maxSelect": 1,
+          "displayFields": [
+            "name"
+          ]
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "v631484h",
+        "name": "notification_type",
+        "type": "select",
+        "required": true,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "values": [
+            "voice_phishing",
+            "unusual_activity",
+            "emergency",
+            "daily_summary"
+          ]
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "5vljiba7",
+        "name": "title",
+        "type": "text",
+        "required": true,
+        "unique": false,
+        "options": {
+          "min": null,
+          "max": 200,
+          "pattern": ""
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "wdcngd76",
+        "name": "message",
+        "type": "editor",
+        "required": true,
+        "unique": false,
+        "options": {
+          "convertUrls": false
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "4utsdwdw",
+        "name": "priority",
+        "type": "select",
+        "required": false,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "values": [
+            "low",
+            "medium",
+            "high",
+            "urgent"
+          ]
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "g6dxw2uw",
+        "name": "related_log",
+        "type": "relation",
+        "required": false,
+        "unique": false,
+        "options": {
+          "collectionId": "1uzmmlcwe85yyuv",
+          "cascadeDelete": false,
+          "minSelect": null,
+          "maxSelect": 1,
+          "displayFields": []
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "g9w99abe",
+        "name": "is_read",
+        "type": "bool",
+        "required": false,
+        "unique": false,
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "rbjds9nq",
+        "name": "read_at",
+        "type": "date",
+        "required": false,
+        "unique": false,
+        "options": {
+          "min": "",
+          "max": ""
+        },
+        "presentable": false
+      }
+    ],
+    "indexes": [],
+    "listRule": "@request.auth.id = guardian.id",
+    "viewRule": "@request.auth.id = guardian.id",
+    "createRule": "@request.auth.id != \"\"",
+    "updateRule": "@request.auth.id = guardian.id",
+    "deleteRule": "@request.auth.id = guardian.id"
+  }
+]

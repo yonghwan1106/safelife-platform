@@ -1,0 +1,106 @@
+[
+  {
+    "id": "brmwshj4eenfyhc",
+    "name": "scan_history",
+    "type": "base",
+    "system": false,
+    "schema": [
+      {
+        "system": false,
+        "id": "ivzywqxg",
+        "name": "user",
+        "type": "relation",
+        "required": true,
+        "unique": false,
+        "options": {
+          "collectionId": "fzlbrvvnlvgtcor",
+          "cascadeDelete": false,
+          "minSelect": null,
+          "maxSelect": 1,
+          "displayFields": [
+            "name"
+          ]
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "dlievd02",
+        "name": "product",
+        "type": "relation",
+        "required": true,
+        "unique": false,
+        "options": {
+          "collectionId": "j7yqlsbo5u7bsk1",
+          "cascadeDelete": false,
+          "minSelect": null,
+          "maxSelect": 1,
+          "displayFields": [
+            "name"
+          ]
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "00zoqvm5",
+        "name": "barcode",
+        "type": "text",
+        "required": true,
+        "unique": false,
+        "options": {
+          "min": null,
+          "max": 20,
+          "pattern": ""
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "r4v7uqs9",
+        "name": "scan_type",
+        "type": "select",
+        "required": true,
+        "unique": false,
+        "options": {
+          "maxSelect": 1,
+          "values": [
+            "barcode",
+            "ocr",
+            "manual"
+          ]
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "xf5jtmcn",
+        "name": "location",
+        "type": "text",
+        "required": false,
+        "unique": false,
+        "options": {
+          "min": null,
+          "max": null,
+          "pattern": ""
+        },
+        "presentable": false
+      },
+      {
+        "system": false,
+        "id": "c9kwgruy",
+        "name": "tts_played",
+        "type": "bool",
+        "required": false,
+        "unique": false,
+        "presentable": false
+      }
+    ],
+    "indexes": [],
+    "listRule": "@request.auth.id = user.id",
+    "viewRule": "@request.auth.id = user.id",
+    "createRule": "@request.auth.id != \"\"",
+    "updateRule": "@request.auth.id = user.id",
+    "deleteRule": "@request.auth.id = user.id"
+  }
+]
