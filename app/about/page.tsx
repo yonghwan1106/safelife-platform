@@ -64,17 +64,6 @@ export default function AboutPage() {
                 className="w-full h-auto object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/50 to-transparent"></div>
-              <div className="absolute bottom-4 left-4 right-4 glass-card rounded-xl p-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl flex items-center justify-center">
-                    <Heart className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="font-bold text-gray-900">함께하는 디지털 생활</p>
-                    <p className="text-sm text-gray-600">세대를 연결하는 AI 기술</p>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
