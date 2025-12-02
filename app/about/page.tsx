@@ -377,11 +377,11 @@ export default function AboutPage() {
                     GitHub 저장소 방문 →
                   </span>
                 </a>
-                <button className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-4 rounded-xl hover:shadow-lg transition-all text-center font-semibold group">
+                <a href="https://www.youtube.com/watch?v=1a2WlKcqWbQ" target="_blank" rel="noopener noreferrer" className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-6 py-4 rounded-xl hover:shadow-lg transition-all text-center font-semibold group block">
                   <span className="group-hover:scale-105 inline-block transition-transform">
                     라이브 데모 보기 →
                   </span>
-                </button>
+                </a>
               </div>
             </div>
           </div>
