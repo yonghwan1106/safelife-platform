@@ -57,7 +57,7 @@ export default function AboutPage() {
           <div className="relative hidden lg:block">
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=600&h=400&fit=crop&q=80"
+                src="/images/intro.jpg"
                 alt="가족이 함께하는 따뜻한 시간"
                 width={600}
                 height={400}
