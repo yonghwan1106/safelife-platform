@@ -291,18 +291,6 @@ export default function Home() {
                 />
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-indigo-900/40 to-transparent"></div>
-                {/* Badge on image */}
-                <div className="absolute bottom-4 left-4 right-4 glass-card rounded-xl p-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-xl flex items-center justify-center">
-                      <Shield className="w-6 h-6 text-white" />
-                    </div>
-                    <div>
-                      <p className="font-bold text-gray-900">AI 실시간 보호</p>
-                      <p className="text-sm text-gray-600">언제 어디서나 안전하게</p>
-                    </div>
-                  </div>
-                </div>
               </div>
 
             </div>
