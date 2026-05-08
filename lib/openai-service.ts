@@ -1,10 +1,17 @@
 // OpenAI GPT-4 서비스 - 보이스피싱 감지 및 컨텍스트 분석
 import OpenAI from 'openai'
 
-const openai = new OpenAI({
-  apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY,
-  dangerouslyAllowBrowser: true // Client-side usage
-})
+let openaiClient: OpenAI | null = null
+
+function getOpenAI(): OpenAI {
+  if (!openaiClient) {
+    openaiClient = new OpenAI({
+      apiKey: process.env.NEXT_PUBLIC_OPENAI_API_KEY || '',
+      dangerouslyAllowBrowser: true // Client-side usage
+    })
+  }
+  return openaiClient
+}
 
 export interface VoicePhishingAnalysis {
   isRisky: boolean
@@ -77,7 +84,7 @@ ${context?.previousTranscripts && context.previousTranscripts.length > 0
 
     console.log('Analyzing with GPT-4...')
 
-    const response = await openai.chat.completions.create({
+    const response = await getOpenAI().chat.completions.create({
       model: 'gpt-4o-mini', // 더 빠르고 저렴한 모델 사용
       messages: [
         { role: 'system', content: systemPrompt },
